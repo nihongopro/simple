@@ -1068,4 +1068,3 @@ type: about
 <button onclick='window.location.reload(true)' style="font-size:16pt;">すすむ</button>
 </div>
  </center>
- </div>
