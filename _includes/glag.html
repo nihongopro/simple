@@ -1062,3 +1062,28 @@
 <button onclick='window.location.reload(true)' style="font-size:16pt;">すすむ</button>
 </div>
  </center>
+<script type="text/javascript">
+// Единственная строка в которой нужно делать изменения. Тут указываем используемое количество дивов, в нашем случае - это 3.
+NumberOfDivsToRandomDisplay = 53;
+var CookieName = 'DivRamdomValueCookie';
+function DisplayRandomDiv() {
+var r = Math.ceil(Math.random() * NumberOfDivsToRandomDisplay);
+if(NumberOfDivsToRandomDisplay > 1) {
+ var ck = 0;
+ var cookiebegin = document.cookie.indexOf(CookieName + "=");
+ if(cookiebegin > -1) {
+ cookiebegin += 1 + CookieName.length;
+ cookieend = document.cookie.indexOf(";",cookiebegin);
+ if(cookieend < cookiebegin) { cookieend = document.cookie.length; }
+ ck = parseInt(document.cookie.substring(cookiebegin,cookieend));
+ }
+ while(r == ck) { r = Math.ceil(Math.random() * NumberOfDivsToRandomDisplay); }
+ document.cookie = CookieName + "=" + r;
+ }
+for( var i=1; i<=NumberOfDivsToRandomDisplay; i++) {
+ document.getElementById("randomdiv"+i).style.display='none';
+ }
+document.getElementById("randomdiv"+r).style.display='block';
+}
+DisplayRandomDiv();
+</script>
