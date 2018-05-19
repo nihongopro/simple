@@ -17,7 +17,7 @@
     {% endif %}
   {% endcapture %}
 {% when 'archive' %}
-  {% capture title %}{{ __.title.archives }} | {{ site.title }}{% endcapture %}
+  {% capture title %}{{ site.title }}{% endcapture %}
 {% when 'category' %}
   {% capture title %}{{ __.title.category }} | {{ site.title }}{% endcapture %}
 {% when 'tag' %}
