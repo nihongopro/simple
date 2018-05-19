@@ -1,3 +1,21 @@
 {% comment %}
-Custom head.
+<!--==============================код спойлера=================================-->
+ <style>
+div.spoiler div.text {
+display: none;
+}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("div.spoiler div.name span").toggle(function(){
+$(this).parent("div.name").parent("div.spoiler").children("div.text").show();
+$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " -15px 0");
+},function(){
+$(this).parent("div.name").parent("div.spoiler").children("div.text").hide();
+$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " 0 -15px");
+});
+});
+</script>
+<!--==============================код спойлера конец=================================-->
 {% endcomment %}
