@@ -4,20 +4,16 @@
 
 <!--==============================код спойлера=================================-->
  <style>
-div.spoiler div.text {
+div.text {
 display: none;
 }
 </style>
 <script type="text/javascript">
 $(document).ready(function(){
-$("div.spoiler div.name span").toggle(function(){
-$(this).parent("div.name").parent("div.spoiler").children("div.text").show();
-$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " -15px 0");
-},function(){
-$(this).parent("div.name").parent("div.spoiler").children("div.text").hide();
-$(this).parent("div.name").parent("div.spoiler").css("backgroundPosition", " 0 -15px");
-});
-});
+      $('.name').click(function(){                     
+      $(this).next('.text').slideToggle('slow');
+            });
+        });
 </script>
 <!--==============================код спойлера конец=================================-->
 
