@@ -48,3 +48,4 @@
   {% assign internal_script = site.vendors._internal | append: '/' | append: internal | relative_url %}
   <script type="text/javascript" src="{{ site.vendors[name] | default: internal_script }}"></script>
 {% endfor %}
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
