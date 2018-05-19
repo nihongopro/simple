@@ -57,35 +57,6 @@
         {% endunless %}
 
         <div class="post-meta">
-          <span class="post-time">
-            {% if site.post_meta.created_at %}
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              {% if site.post_meta.item_text %}
-                <span class="post-meta-item-text">{{ __.post.posted }}</span>
-              {% endif %}
-              <time title="{{ __.post.created }}" itemprop="dateCreated datePublished" datetime="{{ post.date | date_to_xmlschema }}">
-                {{ post.date | date: site.date_format }}
-              </time>
-            {% endif %}
-
-            {% if site.post_meta.created_at and site.post_meta.updated_at %}
-              <span class="post-meta-divider">|</span>
-            {% endif %}
-
-            {% if site.post_meta.updated_at %}
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              {% if site.post_meta.item_text %}
-                <span class="post-meta-item-text">{{ __.post.modified }}</span>
-              {% endif %}
-              <time title="{{ __.post.modified }}" itemprop="dateModified" datetime="{{ post.updated | date: site.date_format }}">
-                {{ post.updated | date: site.date_format }}
-              </time>
-            {% endif %}
-          </span>
 
           {% if post.categories and post.categories.size > 0 and site.post_meta.categories %}
             <span class="post-category" >
