@@ -8,7 +8,6 @@
             {{ post.title | default: post.link }}
             <i class="fa fa-external-link"></i>
           </a>
-        {{ post.description }}
         {% else %}
             <a class="post-title-link" href="{{ post.url | relative_url }}" itemprop="url">
               {% if post.type == 'picture' %}
@@ -21,11 +20,7 @@
       </{% if site.seo %}h3{% else %}h2{% endif %}>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="{{ post.date | date_to_xmlschema }}"
-              content="{{ post.date | date: site.date_format }}" >
-          {{ post.date | date: '%m-%d' }}
-        </time>
+{{ post.description }}
       </div>
 
     </header>
