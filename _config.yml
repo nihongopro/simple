@@ -4,10 +4,10 @@
 # ---------------------------------------------------------------
 
 # Site
-title: Simpleyyt
-subtitle: Yitao's Blog
-description: Too simple, sometimes naive.
-author: Simpleyyt
+title: AKUMA.ASIA
+subtitle: Простой тренажер по японскому языку
+description: 
+author: akuma
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: ja
 date_format: '%Y-%m-%d'
@@ -56,7 +56,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      comments: true
+      comments: false
 
 # Atom feed
 feed:
@@ -70,7 +70,7 @@ plugins:
  - jekyll-sitemap
  - jekyll-feed
 
-alipay: http://p1.bpimg.com/567571/9a4a158daee8aa69.png
+alipay: 
 
 # ---------------------------------------------------------------
 # Site Information Settings
@@ -80,7 +80,7 @@ alipay: http://p1.bpimg.com/567571/9a4a158daee8aa69.png
 favicon: /assets/images/author.jpeg
 
 # Set default keywords (Use a comma to separate)
-keywords: "Jekyll, NexT, simpleyyt, yitao"
+keywords: "日本語, 日本, Япония, японский язык"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -94,7 +94,7 @@ since: 2015
 authoricon: heart
 
 # Footer `powered-by` and `theme-info` copyright
-copyright: true
+copyright: false
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -119,12 +119,12 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
-  #about: /about/
+  categories: /categories/
+  about: /about/
   archives: /archives/
   tags: /tags/
   #sitemap: /sitemap.xml
-  #commonweal: /404.html
+  commonweal: /404.html
 
 
 # Enable/Disable menu icons.
