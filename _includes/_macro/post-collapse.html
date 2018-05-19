@@ -20,7 +20,11 @@
       </{% if site.seo %}h3{% else %}h2{% endif %}>
 
       <div class="post-meta">
-{{ post.description }}
+            {% if site.description %}
+                <div class="post-description">
+                    {{ post.description }}
+                </div>
+            {% endif %}
       </div>
 
     </header>
