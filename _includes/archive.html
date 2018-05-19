@@ -40,9 +40,6 @@
     {% assign post_year = post.date | date: '%Y' %}
     {% if post_year != year or index0_modulo_paginate == 0 and index0_modulo_paginate %}
       {% assign year = post_year %}
-        <div class="collection-title" {% if route %}route="{{ route }}"{% endif %}>
-        <h2 class="archive-year motion-element" id="archive-year-{{ year }}">{{ year }}</h2>
-      </div>
     {% endif %}
     {% comment %} endshow {% endcomment %}
 
