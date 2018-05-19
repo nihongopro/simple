@@ -13,8 +13,6 @@
 {% assign js_vendors = js_vendors | append: ', ' | append: 'velocity: velocity/velocity.min.js?v=1.2.1' %}
 {% assign js_vendors = js_vendors | append: ', ' | append: 'velocity_ui: velocity/velocity.ui.min.js?v=1.2.1' %}
 
-123
-
 {% if site.fancybox %}
   {% assign js_vendors = js_vendors | append: ', ' | append: 'fancybox: fancybox/source/jquery.fancybox.pack.js?v=2.1.5' %}
 {% endif %}
@@ -50,3 +48,5 @@
   {% assign internal_script = site.vendors._internal | append: '/' | append: internal | relative_url %}
   <script type="text/javascript" src="{{ site.vendors[name] | default: internal_script }}"></script>
 {% endfor %}
+
+123
